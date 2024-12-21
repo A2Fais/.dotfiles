@@ -154,6 +154,10 @@ window#waybar.empty #window {
 #bluetooth.connected,
 #network,
 #custom-exit,
+#cpu,
+#memory,
+#disk,
+#language,
 #custom-waybarthemes {
   font-size: 16px;
   font-weight: bold;
@@ -262,15 +266,6 @@ window#waybar.empty #window {
 /* -----------------------------------------------------
  * Hardware Group
  * ----------------------------------------------------- */
-
-#disk,
-#memory,
-#cpu,
-#language {
-  margin: 0px;
-  padding: 0px;
-  font-size: 16px;
-}
 
 #language {
   margin-right: 10px;

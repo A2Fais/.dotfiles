@@ -40,6 +40,9 @@
     // Modules Right    
     "modules-right": [
         "custom/updates",
+        "cpu",
+        "memory",
+        "disk",
         "pulseaudio",
         "bluetooth",
         "battery", 
