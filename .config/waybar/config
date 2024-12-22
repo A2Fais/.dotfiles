@@ -1,3 +1,4 @@
+
 // __        __          _                 
 // \ \      / /_ _ _   _| |__   __ _ _ __  
 //  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
@@ -20,7 +21,6 @@
 
     // Load Modules
     "include": [
-        "~/.config/ml4w/settings/waybar-quicklinks.json",
         "~/.config/waybar/modules.json"
     ],
 
