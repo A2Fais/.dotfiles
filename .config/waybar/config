@@ -26,20 +26,19 @@
 
     // Modules Left
     "modules-left": [
-"custom/appmenu",
-        "group/commons",
         "hyprland/workspaces",
-        "custom/empty"
+        "custom/appmenu",
+        "group/commons",
+        "hyprland/window"
     ],
 
     // Modules Center
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
 
     // Modules Right    
     "modules-right": [
-        "custom/updates",
         "cpu",
         "memory",
         "disk",
@@ -48,6 +47,5 @@
         "battery", 
         "network",
         "custom/exit",
-        "clock"
     ]
 }
