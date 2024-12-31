@@ -8,5 +8,5 @@
  **/
 
 * {
-    font: "Iosevka Nerd Font 10";
+    font: "Inconsolata Nerd Font Mono";
 }
