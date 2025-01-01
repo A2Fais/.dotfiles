@@ -8,17 +8,17 @@ return {
 				theme = "ayu_mirage",
 				-- component_separators = { left = "", right = "" },
 				-- section_separators = { left = "", right = "" },
-        -- component_separators = { left = "", right = " "}, 
-        -- section_separators = { left = "", right = " "}, 
-        section_separators = '', 
-        component_separators = '',
+				-- component_separators = { left = "", right = " "},
+				-- section_separators = { left = "", right = " "},
+				section_separators = "",
+				component_separators = "",
 				disabled_filetypes = {
 					statusline = {},
 					winbar = {},
 				},
 				ignore_focus = {},
 				always_divide_middle = true,
-				globalstatus = true,
+				globalstatus = false,
 				refresh = {
 					statusline = 1000,
 					tabline = 1000,
@@ -26,24 +26,25 @@ return {
 				},
 			},
 			sections = {
-				lualine_a = { 
-          {
-            "mode", fmt = function(str)
-          if str == 'NORMAL' then
-            return 'N'
-          elseif str == 'INSERT' then
-            return 'I'
-          elseif str == 'COMMAND' then 
-            return 'C'
-          else 
-            return str
-          end
-        end 
-          },
-        },
+				lualine_a = {
+					{
+						"mode",
+						fmt = function(str)
+							if str == "NORMAL" then
+								return "NORM"
+							elseif str == "INSERT" then
+								return "INS"
+							elseif str == "COMMAND" then
+								return "COM"
+							else
+								return str
+							end
+						end,
+					},
+				},
 				lualine_b = { "branch", "diff", "diagnostics" },
 				lualine_c = { "filename" },
-				lualine_x = {"encoding"},
+				lualine_x = { "encoding" },
 				lualine_y = { "progress", "filetype" },
 				-- lualine_z = { "location", "fileformat" },
 			},
@@ -55,7 +56,7 @@ return {
 				lualine_y = {},
 				lualine_z = {},
 			},
-      colored = false,
+			colored = false,
 			tabline = {},
 			winbar = {},
 			inactive_winbar = {},

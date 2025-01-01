@@ -54,7 +54,12 @@ wk.add({
 
 local keymaps = {
 	{ "n", "<leader>", ":WhichKey<CR>", opts },
-	{ "n", "<C-l>", "<CMD>CopilotChatToggle<CR>", opts },
+	{
+		{ "i", "n", "v" },
+		"<C-l>",
+		"<CMD>CopilotChatToggle<CR>",
+		opts,
+	},
 	{ { "i", "n" }, "<C-s>", ":w<CR>", opts },
 	{ "n", "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle Pin" },
 	{ "n", "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete Non-Pinned Buffers" },
