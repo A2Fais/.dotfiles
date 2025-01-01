@@ -45,15 +45,16 @@ wk.add({
 	{ "lj", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", desc = "Next Diagnostic" },
 	{ "lk", "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", desc = "Prev Diagnostic" },
 	{ "lS", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Workspace Symbols" },
-	{
-		mode = { "n", "v" }, -- NORMAL and VISUAL mode
-		{ "q", "<cmd>q<cr>", desc = "Quit" }, -- no need to specify mode since it's inherited
-		{ "w", "<cmd>w<cr>", desc = "Write" },
-	},
+	-- {
+	-- 	mode = { "n", "v" }, -- NORMAL and VISUAL mode
+	-- 	{ "q", "<cmd>q<cr>", desc = "Quit" }, -- no need to specify mode since it's inherited
+	-- 	{ "w", "<cmd>w<cr>", desc = "Write" },
+	-- },
 })
 
 local keymaps = {
 	{ "n", "<leader>", ":WhichKey<CR>", opts },
+	{ "n", "<C-l>", "<CMD>CopilotChatToggle<CR>", opts },
 	{ { "i", "n" }, "<C-s>", ":w<CR>", opts },
 	{ "n", "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle Pin" },
 	{ "n", "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete Non-Pinned Buffers" },

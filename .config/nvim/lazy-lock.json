@@ -1,4 +1,5 @@
 {
+  "CopilotChat.nvim": { "branch": "main", "commit": "2ebe591cff06018e265263e71e1dbc4c5aa8281e" },
   "alpha-nvim": { "branch": "main", "commit": "de72250e054e5e691b9736ee30db72c65d560771" },
   "auto-session": { "branch": "main", "commit": "021b64ed7d4ac68a37be3ad28d8e1cba5bec582c" },
   "blink.cmp": { "branch": "main", "commit": "5f442681df24fe705d1ee7ce5b4d435aa4b4dee4" },
@@ -6,6 +7,7 @@
   "bufferline.nvim": { "branch": "main", "commit": "9f0826ae6adfd836a23bf8a4910e3c07450211f4" },
   "catppuccin": { "branch": "main", "commit": "f67b886d65a029f12ffa298701fb8f1efd89295d" },
   "conform.nvim": { "branch": "master", "commit": "9180320205d250429f0f80e073326c674e2a7149" },
+  "copilot.vim": { "branch": "release", "commit": "87038123804796ca7af20d1b71c3428d858a9124" },
   "dressing.nvim": { "branch": "master", "commit": "3a45525bb182730fe462325c99395529308f431e" },
   "eldritch.nvim": { "branch": "master", "commit": "d3df98f58841bdbd88fbe1ca27c9eb76ccca6572" },
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
