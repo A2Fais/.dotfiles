@@ -161,6 +161,7 @@ window#waybar.empty #window {
 #memory,
 #disk,
 #language,
+#custom-weather,
 #custom-waybarthemes {
   font-size: 16px;
   font-weight: bold;

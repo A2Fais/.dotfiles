@@ -35,6 +35,14 @@
     "format": ""
   },
 
+  // weather  
+  "custom/weather": {
+    "format": "    {}",
+    "exec": "./weather.sh",
+    "interval": 600,
+    "on-click": "gnome-weather",
+    "tooltip-format": "Weather"
+  },
     // Tools
   "custom/tools": {
     "format": "",
