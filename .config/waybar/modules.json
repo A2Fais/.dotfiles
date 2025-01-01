@@ -26,13 +26,8 @@
 
   // Hyprland Window
   "hyprland/window": {
-    "rewrite": {
-      "(.*) - Brave": "$1",
-      "(.*) - Chromium": "$1",
-      "(.*) - Brave Search": "$1",
-      "(.*) Microsoft Teams": "$1"
-    },
-    "separate-outputs": true
+     "format": "{}",
+     "icon": true
   },
 
   // Empty
@@ -44,22 +39,6 @@
   "custom/tools": {
     "format": "",
     "tooltip-format": "Tools"
-  },
-
-  // Cliphist
-  "custom/cliphist": {
-    "format": "",
-    "on-click": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh",
-    "on-click-right": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh d",
-    "on-click-middle": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh w",
-    "tooltip-format": "Left: Open clipboard Manager\nRight: Delete an entry\nMiddle: Clear list"
-  },
-
-  // Zen Browser
-  "custom/browser": {
-    "format": "",
-    "on-click": "/opt/zen/zen",
-    "tooltip-format": "Zen Browser"
   },
   
   // Nautilus 
@@ -88,7 +67,7 @@
   // Power Menu
   "custom/exit": {
     "format": "",
-    "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh",
+    "on-click": "~/.config/rofi/powermenu/type-5/powermenu.sh",
     "tooltip-format": "Power Menu"
   },
 
@@ -144,24 +123,16 @@
     "tooltip": false
   },
 
-  // CPU
-  "cpu": {
-    "format": "/ C {usage}% ",
-    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
-  },
-
   // Memory
   "memory": {
     "format": "/ M {}% ",
-    "on-click": "~/.config/ml4w/settings/system-monitor.sh"
   },
 
   // Harddisc space used
   "disk": {
     "interval": 30,
-    "format": " {percentage_used}% ",
+    "format": "    {percentage_used}% ",
     //"path": "/",
-    //"on-click": "~/.config/ml4w/settings/system-monitor.sh"
   },
 
   "hyprland/language": {
@@ -224,7 +195,7 @@
   // Network
   "network": {
     "format": "{ifname}",
-    "format-wifi": "  {essid}", //{signalStrength}% essid
+    "format-wifi": "     {essid}", //{signalStrength}% essid
     "format-ethernet": "  {ifname}",
     "format-disconnected": "Disconnected ⚠",
     "tooltip-format": " {ifname} via {gwaddri}",
@@ -232,8 +203,6 @@
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    //"on-click": "~/.config/ml4w/settings/networkmanager.sh",
-    "on-click-right": "~/.config/ml4w/scripts/nm-applet.sh toggle",
   },
 
   // Battery
@@ -255,9 +224,9 @@
   // Pulseaudio
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{icon} {volume}%",
+    "format": "{icon}    {volume}%",
     "format-bluetooth": "{icon} {volume}%",
-    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-bluetooth-muted": "  {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
@@ -273,12 +242,14 @@
     "on-click": "pavucontrol"
   },
 
+  // CPU
   "cpu": {
-    "format": " {usage}%"
+    "format": "    {usage}%"
   },
   
+  // MEMORY
   "memory": {
-    "format": " {}%"
+    "format": "  {}%"
   },
 
   // Bluetooth
