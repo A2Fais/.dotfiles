@@ -38,8 +38,8 @@
   // weather  
   "custom/weather": {
     "format": "    {}",
-    "exec": "./weather.sh",
-    "interval": 600,
+    "exec": "~/.config/waybar/weather.sh",
+    "interval": 300,
     "on-click": "gnome-weather",
     "tooltip-format": "Weather"
   },
