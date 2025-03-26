@@ -27,7 +27,7 @@
   // Hyprland Window
   "hyprland/window": {
      "format": "{}",
-     "icon": true
+     "icon": false
   },
 
   // Empty

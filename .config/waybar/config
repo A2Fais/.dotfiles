@@ -6,9 +6,6 @@
 //    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
 //                 |___/                   
 //  
-// by Stephan Raabe (2023) 
-// ----------------------------------------------------- 
-//
 {
     // General Settings
     "layer": "top",
@@ -34,8 +31,8 @@
 
     // Modules Center
     "modules-center": [
+        "clock",
         "custom/weather",
-        "clock"
     ],
 
     // Modules Right    

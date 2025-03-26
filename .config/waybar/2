@@ -1,0 +1,142 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 0,
+    "height": 30,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "hyprland/language",
+        "cpu",
+        "memory",
+        "wireplumber",
+        "network",
+        "bluetooth",
+        "battery",
+        "custom/power"
+    ],
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "11": "1",
+            "12": "2",
+            "13": "3",
+            "14": "4",
+            "15": "5",
+            "16": "6",
+            "17": "7",
+            "18": "8",
+            "19": "9",
+        },
+        "persistent-workspaces": {
+          "eDP-1": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+          "DP-1": [11, 12, 13, 14, 15, 16, 17, 18, 19],
+        }
+    },
+    "cpu": {
+        "interval": 5,
+        "format": " {usage}%",
+        "max-length": 10,
+        "on-click": "kitty btop"
+      },
+    "memory": {
+        "interval": 5,
+        "format": " {}%",
+        "max-length": 10,
+        "on-click": "kitty btop"
+    },
+    "clock": {
+        "tooltip": false,
+        "tooltip-format": "<small>{calendar}</small>",
+        "format": "  {:%H:%M    %a, %d %b %Y}",
+    },
+    "hyprland/language": {
+        "format": "{shortDescription}",
+        "keyboard-name": "at-translated-set-2-keyboard",
+        "on-click": "~/.config/hypr/scripts/switch-kb-layout.sh"
+    },
+    "network": {
+        "format-wifi" : "{icon}",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰖩"],
+        "format-ethernet": "󰀂",
+        // "format-alt" : "󱛇",
+        "format-disconnected" : "󰖪",
+        "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "nmcli device wifi rescan && kitty ~/.config/hypr/scripts/nm-tui-delay.sh",
+        "on-click-right": "nmcli device wifi rescan",
+        "interval": 5,
+        "nospacing": 1,
+    },
+    "battery": {
+        "format": "{icon}",
+        "format-icons": {
+            "charging": [
+                "󰢜",
+                "󰂆",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊",
+                "󰂋",
+                "󰂅"
+            ],
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        },
+        "format-full": "󰁹",
+        "interval": 5,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip-format": "{capacity}%"
+    },
+    "custom/power": {
+        "format": "󰤆",
+        "tooltip": false,
+        "on-click": "wlogout"
+    },
+    "wireplumber": {
+        "format": "{icon}",
+        "format-muted": " ",
+        "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+        "format-icons": [" ", " ", " "],
+        "tooltip-format": "{volume} %"
+    },
+    "bluetooth": {
+        "on-click": "kitty bluetuith",
+        "format": "󰂯",
+        "format-off": "󰂲",
+        "format-connected": "󰂱",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format": "{device_enumerate}"
+      },
+}

@@ -10,7 +10,7 @@
 */
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modules-left {
@@ -19,7 +19,6 @@ window#waybar {
 
 .modules-right {
   padding-right: 14px;
-
 }
 
 /* -----------------------------------------------------
@@ -31,16 +30,19 @@ window#waybar {
   font-style: normal;
   opacity: 0.86;
   border-radius: 10px;
-  margin: 0 15px;
+  margin: 2px 8px;
 }
 
 #workspaces button {
   border: 0;
-  border-radius: 0;
-  font-size: 14px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 12px;
   color: white;
   transition: all 0.1s ease-in-out;
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 4px 4px;
+  padding: 0px 6px;
 }
 
 #workspaces button.active {
