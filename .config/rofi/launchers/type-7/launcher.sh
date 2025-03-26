@@ -11,9 +11,9 @@
 ## style-6     style-7     style-8     style-9     style-10
 
 dir="$HOME/.config/rofi/launchers/type-7"
-theme='style-7'
+theme='style-2'
 
 ## Run
 rofi \
-    -show drun \
-    -theme ${dir}/${theme}.rasi
+  -show drun \
+  -theme ${dir}/${theme}.rasi
