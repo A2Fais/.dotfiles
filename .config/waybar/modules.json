@@ -37,7 +37,7 @@
 
   // weather  
   "custom/weather": {
-    "format": "    {}",
+    "format": "  {}",
     "exec": "~/.config/waybar/weather.sh",
     "interval": 300,
     "on-click": "gnome-weather",
@@ -139,7 +139,7 @@
   // Harddisc space used
   "disk": {
     "interval": 30,
-    "format": "    {percentage_used}% ",
+    "format": " {percentage_used}% ",
     //"path": "/",
   },
 
@@ -203,7 +203,7 @@
   // Network
   "network": {
     "format": "{ifname}",
-    "format-wifi": "     {essid}", //{signalStrength}% essid
+    "format-wifi": " {essid}", //{signalStrength}% essid
     "format-ethernet": "  {ifname}",
     "format-disconnected": "Disconnected ⚠",
     "tooltip-format": " {ifname} via {gwaddri}",
@@ -232,7 +232,7 @@
   // Pulseaudio
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{icon}    {volume}%",
+    "format": "{icon} {volume}%",
     "format-bluetooth": "{icon} {volume}%",
     "format-bluetooth-muted": "  {icon} {format_source}",
     "format-muted": " {format_source}",
@@ -252,12 +252,12 @@
 
   // CPU
   "cpu": {
-    "format": "    {usage}%"
+    "format": " {usage}%"
   },
   
   // MEMORY
   "memory": {
-    "format": "  {}%"
+    "format": " {}%"
   },
 
   // Bluetooth

@@ -9,8 +9,12 @@
  * ----------------------------------------------------- 
 */
 
+* {
+  font-family: Adwaita Mono;
+}
+
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modules-left {
@@ -37,7 +41,7 @@ window#waybar {
   border: 0;
   border-radius: 15px;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 13px;
   color: white;
   transition: all 0.1s ease-in-out;
   background: rgba(0, 0, 0, 0.2);
@@ -47,8 +51,7 @@ window#waybar {
 
 #workspaces button.active {
   color: white;
-  background: rgba(0, 0, 0, 1);
-  opacity: 1.0;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #workspaces button:hover {
