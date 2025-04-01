@@ -37,7 +37,7 @@
 
   // weather  
   "custom/weather": {
-    "format": "  {}",
+    "format": " {}",
     "exec": "~/.config/waybar/weather.sh",
     "interval": 300,
     "on-click": "gnome-weather",
@@ -51,7 +51,7 @@
   
   // Nautilus 
   "custom/nautilus": {
-    "format": "",
+    "format": "󱧶 ",
     "on-click": "nautilus",
     "tooltip-format": "Files"
   },
@@ -127,14 +127,10 @@
 
   // System
   "custom/system": {
-    "format": "",
+    "format": "C",
     "tooltip": false
   },
 
-  // Memory
-  "memory": {
-    "format": "/ M {}% ",
-  },
 
   // Harddisc space used
   "disk": {
@@ -257,7 +253,7 @@
   
   // MEMORY
   "memory": {
-    "format": " {}%"
+    "format": " {}%"
   },
 
   // Bluetooth
