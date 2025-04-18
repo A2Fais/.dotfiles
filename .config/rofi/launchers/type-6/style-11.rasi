@@ -22,7 +22,7 @@
 }
 
 window {
-    background-color:   @bg0;
+    background-color:   #22222299;
 
     location:       center;
     width:          640;
