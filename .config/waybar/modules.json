@@ -253,7 +253,7 @@
   
   // MEMORY
   "memory": {
-    "format": " {}%"
+    "format": "󰘷 {}%"
   },
 
   // Bluetooth
