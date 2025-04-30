@@ -3,7 +3,6 @@
 format = """
 [](red)\
 $os\
-$username\
 [](bg:peach fg:red)\
 $directory\
 [](bg:yellow fg:peach)\
@@ -48,7 +47,7 @@ Fedora = "󰣛"
 Alpine = ""
 Amazon = ""
 Android = ""
-Arch = "󰣇"
+Arch = "󰣇 "
 Artix = "󰣇"
 CentOS = ""
 Debian = "󰣚"
