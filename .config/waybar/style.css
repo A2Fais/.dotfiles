@@ -1,41 +1,103 @@
-/*
- * __        __          _                  ____  _         _       
- * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
- *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
- *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
- *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
- *                 |___/                              |___/         
- *  
- * ----------------------------------------------------- 
-*/
-
 * {
   font-family: Adwaita Mono;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.2);
+  background: transparent;
 }
 
 .modules-left {
+  /* background-color: rgba(37, 37, 37, 0.7); */
+  margin-top: 8px;
+  margin-left: 12px;
   padding-left: 14px;
+  border-radius: 12px;
+}
+
+#clock {
+  background-color: rgba(37, 37, 37, 0.7);
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+  color: #FFFFFF;
+  opacity: 0.9;
+  border-radius: 12px;
+}
+
+#custom-weather {
+  background-color: rgba(37, 37, 37, 0.7);
+  margin-top: 8px;
+  margin-left: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+  color: #FFFFFF;
+  opacity: 0.9;
+  border-radius: 12px;
 }
 
 .modules-right {
+  margin-top: 8px;
+  margin-right: 12px;
   padding-right: 14px;
+  border-radius: 12px;
+}
+
+#cpu,
+#memory,
+#disk,
+#pulseaudio,
+#bluetooth,
+#bluetooth.on,
+#bluetooth.connected,
+#window,
+#workspaces,
+#network {
+  background-color: rgba(37, 37, 37, 0.7);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+  color: #FFFFFF;
+  margin-right: 10px;
+  opacity: 0.9;
+  border-radius: 12px;
+}
+
+#custom-appmenu,
+#custom-terminal,
+#custom-nautilus {
+  background-color: rgba(37, 37, 37, 0.7);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+  color: #FFFFFF;
+  margin-right: 10px;
+  opacity: 0.9;
+  border-radius: 12px;
+}
+
+#custom-exit {
+  background-color: rgba(33, 33, 33, 0.7);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 15px 0 10px;
+  color: #FFFFFF;
+  opacity: 0.9;
+  border-radius: 12px;
 }
 
 /* -----------------------------------------------------
  * Workspaces 
  * ----------------------------------------------------- */
 
-#workspaces {
+/* #workspaces {
   font-weight: bold;
   font-style: normal;
   opacity: 0.86;
   border-radius: 10px;
   margin: 2px 8px;
-}
+} */
 
 #workspaces button {
   border: 0;
@@ -64,8 +126,8 @@ window#waybar {
 
 tooltip {
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0.9;
+  background-color: rgba(33, 33, 33, 0.95);
+  opacity: 0.95;
   padding: 16px;
   margin: 0px;
 }
@@ -80,15 +142,15 @@ tooltip label {
  * Window
  * ----------------------------------------------------- */
 
-#window {
+/* #window {
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin: 8px 15px 8px 0px;
   padding: 2px 10px 0px 10px;
   border-radius: 12px;
   opacity: 0.8;
-}
+} */
 
 window#waybar.empty #window {
   background-color: transparent;
@@ -126,11 +188,11 @@ window#waybar.empty #window {
  * Modules
  * ----------------------------------------------------- */
 
-.modules-left>widget:first-child>#workspaces {
+.modules-left > widget:first-child > #workspaces {
   margin-left: 0px;
 }
 
-.modules-right>widget:last-child>#workspaces {
+.modules-right > widget:last-child > #workspaces {
   margin-right: 0;
 }
 
@@ -147,33 +209,21 @@ window#waybar.empty #window {
 #custom-wallpaper,
 #custom-settings,
 #custom-system,
-#custom-nautilus,
 #custom-hyprshade,
 #custom-hypridle,
 #custom-tools,
-#custom-terminal,
-#custom-appmenu,
 #custom-updates,
-#clock,
 #battery,
 #custom-settings,
-#pulseaudio,
-#bluetooth,
-#bluetooth.on,
-#bluetooth.connected,
-#network,
-#custom-exit,
-#cpu,
-#memory,
-#disk,
 #language,
-#custom-weather,
 #custom-waybarthemes {
-  font-size: 16px;
+  background-color: rgba(37, 37, 37, 0.7);
+  font-size: 14px;
   font-weight: bold;
   padding: 0 10px 0 10px;
-  color: white;
-  opacity: 0.8;
+  color: #FFFFFF;
+  opacity: 0.9;
+  border-radius: 12px;
 }
 
 #custom-browser:hover,
@@ -199,10 +249,9 @@ window#waybar.empty #window {
 #custom-exit:hover,
 #battery:hover,
 #custom-waybarthemes:hover {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(55, 55, 55, 0.9);
   transition: ease-out 0.1s all;
 }
-
 
 #custom-tools {
   margin-right: 12px;
@@ -253,12 +302,12 @@ window#waybar.empty #window {
 
 #custom-updates.yellow {
   background-color: #ff9a3c;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 #custom-updates.red {
   background-color: #dc2f2f;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* -----------------------------------------------------
@@ -268,7 +317,6 @@ window#waybar.empty #window {
 #language {
   margin-right: 10px;
 }
-
 
 /* -----------------------------------------------------
  * Backlight
@@ -281,7 +329,6 @@ window#waybar.empty #window {
   margin: 8px 15px 8px 0px;
   opacity: 0.8;
 }
-
 
 /* #pulseaudio.muted { */
 /*   background-color: @backgrounddark; */
@@ -348,10 +395,10 @@ window#waybar.empty #window {
 /*   color: @textcolor3; */
 /* } */
 
-#tray>.passive {
+#tray > .passive {
   -gtk-icon-effect: dim;
 }
 
-#tray>.needs-attention {
+#tray > .needs-attention {
   -gtk-icon-effect: highlight;
 }
