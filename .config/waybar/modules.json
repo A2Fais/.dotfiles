@@ -13,14 +13,14 @@
       "default": ""
     },
     "persistent-workspaces": {
-            "*": 4
+      "*": 4
     }
   },
 
   // Hyprland Window
   "hyprland/window": {
-     "format": "{}",
-     "icon": false
+    "format": "{}",
+    "icon": false
   },
 
   // Empty
@@ -28,7 +28,7 @@
     "format": ""
   },
 
-  // weather  
+  // weather
   "custom/weather": {
     "format": "  {}",
     "exec": "~/.config/waybar/weather.sh",
@@ -36,21 +36,27 @@
     "on-click": "gnome-weather",
     "tooltip-format": "Weather"
   },
-    // Tools
+  // Tools
   "custom/tools": {
     "format": "",
     "tooltip-format": "Tools"
   },
-  
-  // Nautilus 
+
+  // Nautilus
   "custom/nautilus": {
     "format": "󱧶 ",
     "on-click": "nautilus",
     "tooltip-format": "Files"
   },
 
+  // Distro Logo
+  "custom/distrologo": {
+    "format": "󰣇 ",
+    "tooltip-format": "Arch BTW"
+  },
+
   // Terminal
-  "custom/terminal":{
+  "custom/terminal": {
     "format": "",
     "on-click": "kitty",
     "tooltip-format": "Terminal"
@@ -124,11 +130,10 @@
     "tooltip": false
   },
 
-
   // Harddisc space used
   "disk": {
     "interval": 30,
-    "format": " {percentage_used}% ",
+    "format": " {percentage_used}% "
     //"path": "/",
   },
 
@@ -163,13 +168,10 @@
     ]
   },
 
-  // Common App group 
+  // Common App group
   "group/commons": {
     "orientation": "horizontal",
-    "modules": [
-      "custom/settings",
-      "custom/wallpaper"
-    ]
+    "modules": ["custom/settings", "custom/wallpaper"]
   },
 
   // Group Settings
@@ -180,11 +182,7 @@
       "children-class": "not-memory",
       "transition-left-to-right": true
     },
-    "modules": [
-      "custom/settings",
-      "custom/waybarthemes",
-      "custom/wallpaper"
-    ]
+    "modules": ["custom/settings", "custom/waybarthemes", "custom/wallpaper"]
   },
 
   // Network
@@ -197,7 +195,7 @@
     "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
+    "max-length": 50
   },
 
   // Battery
@@ -241,7 +239,7 @@
   "cpu": {
     "format": " {usage}%"
   },
-  
+
   // MEMORY
   "memory": {
     "format": "󰘷 {}%"

@@ -13,13 +13,15 @@
         "~/.config/waybar/modules.json"
     ],
 
+    // "custom/appmenu",
+    // "custom/terminal",
+    // "custom/nautilus",
+
     // Modules Left
     "modules-left": [
+        "custom/distrologo",
         "hyprland/workspaces",
-        "custom/appmenu",
-        "custom/terminal",
-        "custom/nautilus",
-        "hyprland/window"
+        "hyprland/window",
     ],
 
     // Modules Center
