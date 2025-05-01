@@ -1,0 +1,2 @@
+pkill waybar && waybar &
+disown
