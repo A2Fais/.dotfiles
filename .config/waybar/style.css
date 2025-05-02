@@ -50,7 +50,7 @@ window#waybar {
 #window,
 #workspaces,
 #network {
-  background-color: rgba(37, 37, 37, 0.5);
+  background-color: rgba(37, 37, 37, 0.7);
   font-size: 14px;
   font-weight: bold;
   padding: 0 10px 0 10px;
@@ -72,7 +72,7 @@ window#waybar {
 }
 
 #custom-distrologo {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(37, 37, 37, 0.7);
   padding: 0 7px 0 12px;
   border-radius: 12px;
   font-size: 14px;
