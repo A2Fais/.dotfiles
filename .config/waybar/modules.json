@@ -51,7 +51,7 @@
 
   // Distro Logo
   "custom/distrologo": {
-    "format": "󰣇 ",
+    "format": " ",
     "tooltip-format": "Arch BTW"
   },
 

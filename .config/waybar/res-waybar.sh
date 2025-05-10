@@ -1,2 +1,0 @@
-pkill waybar && waybar &
-disown

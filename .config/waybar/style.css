@@ -73,9 +73,10 @@ window#waybar {
 
 #custom-distrologo {
   background-color: rgba(37, 37, 37, 0.7);
+  color: white;
   padding: 0 7px 0 12px;
   border-radius: 12px;
-  font-size: 14px;
+  font-size: 20px;
   margin-right: 8px;
 }
 
