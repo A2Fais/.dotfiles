@@ -42,6 +42,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 window-padding-x = 10
+window-padding-y = 10
 window-width = 222
 window-height = 52
 theme = Aura
@@ -51,3 +52,5 @@ font-style = Medium
 font-size = 14
 cursor-style = block
 cursor-style-blink = false
+shell-integration = zsh
+confirm-close-surface = false
