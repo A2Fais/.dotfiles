@@ -38,6 +38,7 @@
         "pulseaudio",
         "bluetooth",
         "battery", 
+	"custom/netspeed",
         "network",
         "custom/exit",
     ]

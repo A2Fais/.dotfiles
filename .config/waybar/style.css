@@ -34,9 +34,19 @@ window#waybar {
   border-radius: 12px;
 }
 
+#custom-netspeed {
+  background-color: rgba(37, 37, 37, 0.7);
+  margin-right: 14px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
 .modules-right {
   margin-top: 8px;
-  padding-right: 14px;
+  padding-right: 12px;
   border-radius: 12px;
 }
 
@@ -84,7 +94,7 @@ window#waybar {
   background-color: rgba(37, 37, 37, 0.7);
   font-size: 16px;
   font-weight: bold;
-  padding: 0 15px 0 10px;
+  padding: 0 15px 0 15px;
   color: #ffffff;
   opacity: 0.9;
   border-radius: 12px;

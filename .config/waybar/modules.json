@@ -51,7 +51,7 @@
 
   // Distro Logo
   "custom/distrologo": {
-    "format": " ",
+    "format": "󰣇 ",
     "tooltip-format": "Arch BTW"
   },
 
@@ -238,6 +238,11 @@
   // CPU
   "cpu": {
     "format": " {usage}%"
+  },
+
+  "custom/netspeed": {
+    "format": "{}",
+    "exec": "~/.config/waybar/netspeed.sh",
   },
 
   // MEMORY
