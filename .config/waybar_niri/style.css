@@ -1,0 +1,242 @@
+* {
+  font-family: Adwaita Mono;
+}
+
+window#waybar {
+  background-color: rgba(37, 37, 37, 0);
+  padding: 10px;
+}
+
+.modules-left {
+  margin-top: 8px;
+  padding-left: 14px;
+  border-radius: 12px;
+}
+
+#clock {
+  background-color: rgba(37, 37, 37, 0.7);
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+#custom-weather {
+  background-color: rgba(37, 37, 37, 0.7);
+  margin-top: 8px;
+  margin-left: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+#custom-netspeed {
+  background-color: rgba(37, 37, 37, 0.7);
+  margin-right: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.modules-right {
+  margin-top: 8px;
+  padding-right: 12px;
+  border-radius: 12px;
+}
+
+#cpu,
+#memory,
+#disk,
+#pulseaudio,
+#bluetooth,
+#bluetooth.on,
+#bluetooth.connected,
+#network {
+  background-color: rgba(37, 37, 37, 0.7);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  margin-right: 10px;
+  margin-left: 12px;
+  border-radius: 12px;
+}
+
+
+
+#custom-distrologo {
+  background-color: rgba(37, 37, 37, 0.7);
+  color: white;
+  padding: 0 7px 0 12px;
+  border-radius: 12px;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+#custom-exit {
+  background-color: rgba(37, 37, 37, 0.7);
+  font-size: 17px;
+  font-weight: bold;
+  padding: 4px 15px 4px 15px;
+  color: #ffffff;
+  opacity: 0.9;
+  border-radius: 12px;
+}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+#workspaces {
+  font-weight: normal;
+  font-style: normal;
+  opacity: 1;
+  border-radius: 12px;
+  margin: 0;
+  background: transparent;
+  padding: 0;
+}
+
+#workspaces button {
+  border: 0;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  transition: all 0.1s ease-in-out;
+  background: rgba(37, 37, 37, 0.7);
+  margin: 8px 0 8px 0;
+  padding: 4px 10px 4px 10px;
+}
+
+#workspaces button.active {
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#workspaces button:hover {
+  background: rgba(55, 55, 55, 0.9);
+  transition: ease-out 0.1s all;
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+  border-radius: 4px;
+  background-color: rgba(33, 33, 33, 0.95);
+  opacity: 0.95;
+  padding: 16px;
+  margin: 0px;
+}
+
+tooltip label {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+
+
+
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0px;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+/* -----------------------------------------------------
+ * Custom Quicklinks
+ * ----------------------------------------------------- */
+
+#battery,
+#custom-workspaces {
+  background-color: rgba(37, 37, 37, 0.7);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  opacity: 0.9;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-workspaces span {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-workspaces:hover,
+#clock:hover,
+#custom-weather:hover,
+#custom-netspeed:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#pulseaudio:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#custom-exit:hover {
+  background: rgba(55, 55, 55, 0.9);
+  transition: ease-out 0.1s all;
+}
+
+
+
+/* #custom-hypridle.active { */
+/*   color: @iconcolor; */
+/* } */
+
+
+
+
+
+/* -----------------------------------------------------
+ * Custom Modules
+ * ----------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+/* #pulseaudio.muted { */
+/*   background-color: @backgrounddark; */
+/*   color: @textcolor1; */
+/* } */
+
+
+
+
+
+/* -----------------------------------------------------
+ * Battery
+ * ----------------------------------------------------- */
+
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+

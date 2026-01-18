@@ -1,0 +1,285 @@
+{
+  // Workspaces
+  "custom/workspaces": {
+    "format": "{}",
+    "exec": "~/.config/waybar/workspace.sh",
+    "interval": 1,
+    "on-click": "niri msg action focus-workspace-next",
+    "on-click-right": "niri msg action focus-workspace-previous",
+    "transition": "fade"
+  },
+
+  // Hyprland Window
+  "hyprland/window": {
+    "format": "{}",
+    "icon": true
+  },
+
+  // Empty
+  "custom/empty": {
+    "format": ""
+  },
+
+  // weather
+  "custom/weather": {
+    "format": "{}",
+    "exec": "~/.config/waybar/weather.sh",
+    "interval": 300,
+    "on-click": "gnome-weather",
+    "tooltip-format": "Weather"
+  },
+  // Tools
+  "custom/tools": {
+    "format": "",
+    "tooltip-format": "Tools"
+  },
+
+  // Nautilus
+  "custom/nautilus": {
+    "format": "󱧶 ",
+    "on-click": "nautilus",
+    "tooltip-format": "Files"
+  },
+
+  // Distro Logo
+  "custom/distrologo": {
+    "format": "󰣇 ",
+    "tooltip-format": "Arch BTW"
+  },
+
+  // Terminal
+  "custom/terminal": {
+    "format": "",
+    "on-click": "kitty",
+    "tooltip-format": "Terminal"
+  },
+
+  // Rofi Application Launcher
+  "custom/appmenu": {
+    // START APPS LABEL
+    "format": "",
+    // END APPS LABEL
+    "on-click": "~/.config/rofi/launchers/type-6/launcher.sh",
+    "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
+  },
+
+  // Power Menu
+  "custom/exit": {
+    "format": "󰐦",
+    "on-click": "~/.config/rofi/powermenu/type-6/powermenu.sh",
+    "tooltip-format": "Power Menu"
+  },
+
+  // Hyprshade
+  "custom/hyprshade": {
+    "format": "",
+    "tooltip-format": "Toggle Screen Shader",
+    "on-click": "sleep 0.5; ~/.config/hypr/scripts/hyprshade.sh",
+    "on-click-right": "sleep 0.5; ~/.config/hypr/scripts/hyprshade.sh rofi"
+  },
+
+  // Hypridle inhibitor
+  "custom/hypridle": {
+    "format": "",
+    "return-type": "json",
+    "escape": true,
+    "exec-on-event": true,
+    "interval": 60,
+    "exec": "~/.config/hypr/scripts/hypridle.sh status",
+    "on-click": "~/.config/hypr/scripts/hypridle.sh toggle",
+    "on-click-right": "hyprlock"
+  },
+
+  // Keyboard State
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+
+  // System tray
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+
+  // Clock
+  "clock": {
+    "format": "{:%H:%M · %a %d %b}",
+    "format-alt": "{:%A, %B %d, %Y}",
+    "on-click": "gnome-calendar",
+    "timezone": "Etc/GMT-6",
+    "tooltip-format": "{:%A, %B %d, %Y}"
+  },
+
+  // System
+  "custom/system": {
+    "format": "C",
+    "tooltip": false
+  },
+
+  // Harddisc space used
+  "disk": {
+    "interval": 30,
+    "format": "󰋊 Disk {percentage_used}%"
+    //"path": "/",
+  },
+
+  "hyprland/language": {
+    "format": "/ K {short}"
+  },
+
+  // Group Hardware
+  "group/hardware": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
+    "modules": ["custom/system", "disk", "cpu", "memory", "hyprland/language"]
+  },
+
+  // Group Tools
+  "group/tools": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/tools",
+      "custom/cliphist",
+      "custom/hypridle",
+      "custom/hyprshade"
+    ]
+  },
+
+  // Common App group
+  "group/commons": {
+    "orientation": "horizontal",
+    "modules": ["custom/settings", "custom/wallpaper"]
+  },
+
+  // Group Settings
+  "group/settings": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": true
+    },
+    "modules": ["custom/settings", "custom/waybarthemes", "custom/wallpaper"]
+  },
+
+  // Network
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " {essid}", //{signalStrength}% essid
+    "format-ethernet": "  {ifname}",
+    "format-disconnected": "Disconnected ⚠",
+    "tooltip-format": " {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+
+  // Battery
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [" ", " ", " ", " ", " "]
+  },
+
+  // Pulseaudio
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon} Vol {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-bluetooth-muted": "{icon} {format_source}",
+    "format-muted": "{icon} Muted",
+    "format-source": "{volume}% 󰍬",
+    "format-source-muted": "󰍭",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰋋",
+      "headset": "󰋋",
+      "phone": "󰘛",
+      "portable": "󰘛",
+      "car": "� Infant",
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  // CPU
+  "cpu": {
+    "format": "󰍛 CPU {usage}%"
+  },
+
+  "custom/netspeed": {
+    "format": "{}",
+    "exec": "~/.config/waybar/netspeed.sh",
+  },
+
+  // MEMORY
+  "memory": {
+    "format": " RAM {}%"
+  },
+
+  // Bluetooth
+  "bluetooth": {
+    "format": " On",
+    "format-connected": " Active",
+    "format-disabled": "",
+    "format-off": "",
+    "interval": 30,
+    "on-click": "blueman-manager",
+    "format-no-controller": ""
+  },
+
+  // Other
+  "user": {
+    "format": "{user}",
+    "interval": 60,
+    "icon": false
+  },
+
+  // backlight:
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "scroll-step": 1
+  }
+}
