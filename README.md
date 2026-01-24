@@ -1,1 +1,1 @@
-![2025-05-10-034135_hyprshot](https://github.com/user-attachments/assets/3f3e014a-c281-4a0c-81a5-ae8a0a552650)
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/64026121-ae70-46dd-b7db-f3fe237fd825" />
