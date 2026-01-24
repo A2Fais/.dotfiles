@@ -8,7 +8,7 @@ columns=2
 
 # Appearance & Behavior
 allow_images=true
-image_size=48
+image_size=32
 no_actions=true
 insensitive=true
 hide_scroll=true
