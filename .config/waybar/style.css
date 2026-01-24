@@ -3,7 +3,7 @@
 }
 
 window#waybar {
-  background-color: rgba(37, 37, 37, 0);
+  background-color: transparent;
   padding: 10px;
 }
 
@@ -14,7 +14,7 @@ window#waybar {
 }
 
 #clock {
-  background-color: rgba(37, 37, 37, 0.7);
+  background-color: rgba(30, 30, 40, 0.7);
   margin-top: 8px;
   font-size: 15px;
   font-weight: bold;
@@ -24,7 +24,7 @@ window#waybar {
 }
 
 #custom-weather {
-  background-color: rgba(37, 37, 37, 0.7);
+  background-color: rgba(30, 30, 40, 0.7);
   margin-top: 8px;
   margin-left: 12px;
   font-size: 15px;
@@ -35,7 +35,7 @@ window#waybar {
 }
 
 #custom-netspeed {
-  background-color: rgba(37, 37, 37, 0.7);
+  background-color: rgba(30, 30, 40, 0.7);
   margin-right: 14px;
   font-size: 15px;
   font-weight: bold;
@@ -50,15 +50,65 @@ window#waybar {
   border-radius: 12px;
 }
 
-#cpu,
-#memory,
-#disk,
-#pulseaudio,
+#cpu {
+  background-color: rgba(30, 30, 40, 0.7);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  margin-right: 10px;
+  margin-left: 12px;
+  border-radius: 12px;
+}
+
+#memory {
+  background-color: rgba(30, 30, 40, 0.7);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  margin-right: 10px;
+  margin-left: 12px;
+  border-radius: 12px;
+}
+
+#disk {
+  background-color: rgba(30, 30, 40, 0.7);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  margin-right: 10px;
+  margin-left: 12px;
+  border-radius: 12px;
+}
+
+#pulseaudio {
+  background-color: rgba(30, 30, 40, 0.7);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  margin-right: 10px;
+  margin-left: 12px;
+  border-radius: 12px;
+}
+
 #bluetooth,
 #bluetooth.on,
-#bluetooth.connected,
+#bluetooth.connected {
+  background-color: rgba(30, 30, 40, 0.7);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  margin-right: 10px;
+  margin-left: 12px;
+  border-radius: 12px;
+}
+
 #network {
-  background-color: rgba(37, 37, 37, 0.7);
+  background-color: rgba(30, 30, 40, 0.7);
   font-size: 15px;
   font-weight: bold;
   padding: 4px 10px 4px 10px;
@@ -71,7 +121,7 @@ window#waybar {
 
 
 #custom-distrologo {
-  background-color: rgba(37, 37, 37, 0.7);
+  background-color: rgba(30, 30, 40, 0.7);
   color: white;
   padding: 0 7px 0 12px;
   border-radius: 12px;
@@ -80,7 +130,7 @@ window#waybar {
 }
 
 #custom-exit {
-  background-color: rgba(37, 37, 37, 0.7);
+  background-color: rgba(30, 30, 40, 0.7);
   font-size: 17px;
   font-weight: bold;
   padding: 4px 15px 4px 15px;
@@ -110,14 +160,14 @@ window#waybar {
   font-size: 15px;
   color: white;
   transition: all 0.1s ease-in-out;
-  background: rgba(37, 37, 37, 0.7);
+  background: rgba(30, 30, 40, 0.7);
   margin: 8px 0 8px 0;
   padding: 4px 10px 4px 10px;
 }
 
 #workspaces button.active {
   color: white;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(30, 30, 40, 0.7);
 }
 
 #workspaces button:hover {
@@ -163,9 +213,19 @@ tooltip label {
  * Custom Quicklinks
  * ----------------------------------------------------- */
 
-#battery,
+#battery {
+  background-color: rgba(30, 30, 40, 0.7);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  color: #ffffff;
+  opacity: 0.9;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 #custom-workspaces {
-  background-color: rgba(37, 37, 37, 0.7);
+  background-color: rgba(30, 30, 40, 0.7);
   font-size: 15px;
   font-weight: bold;
   padding: 4px 10px 4px 10px;
@@ -231,7 +291,7 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
+  background-color: rgba(30, 30, 40, 0.7);
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;

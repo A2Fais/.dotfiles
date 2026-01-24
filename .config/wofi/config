@@ -1,0 +1,28 @@
+# General settings
+show=drun
+width=500
+height=600
+location=center
+lines=12
+columns=2
+
+# Appearance & Behavior
+allow_images=true
+image_size=32
+no_actions=true
+insensitive=true
+hide_scroll=true
+dynamic=true
+term=foot
+
+# Formatting & Cache
+drun-display-format={name} <span color="#505050">[{exec}]</span>
+cache_file=/home/aseeralfaisal/.cache/wofi-cache
+
+# Keybindings
+key_expand=Tab
+key_exit=Escape
+key_nav_up=Up
+key_nav_down=Down
+key_nav_left=Left
+key_nav_right=Right

@@ -1,20 +1,12 @@
 {
   // Workspaces
-  "hyprland/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace r-1",
-    "on-scroll-down": "hyprctl dispatch workspace r+1",
-    "on-click": "activate",
-    "active-only": false,
-    "all-outputs": true,
+  "custom/workspaces": {
     "format": "{}",
-    "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": ""
-    },
-    "persistent-workspaces": {
-      "*": 3
-    }
+    "exec": "~/.config/waybar/workspace.sh",
+    "interval": 1,
+    "on-click": "hyprctl dispatch workspace +1",
+    "on-click-right": "hyprctl dispatch workspace -1",
+    "transition": "fade"
   },
 
   // Hyprland Window
@@ -30,7 +22,7 @@
 
   // weather
   "custom/weather": {
-    "format": "  {}",
+    "format": "{}",
     "exec": "~/.config/waybar/weather.sh",
     "interval": 300,
     "on-click": "gnome-weather",
@@ -73,7 +65,7 @@
 
   // Power Menu
   "custom/exit": {
-    "format": "",
+    "format": "󰐦",
     "on-click": "~/.config/rofi/powermenu/type-6/powermenu.sh",
     "tooltip-format": "Power Menu"
   },
@@ -117,11 +109,11 @@
 
   // Clock
   "clock": {
-    "format": "{:%H:%M %A}",
-    //"on-click": "ags toggle calendar",
+    "format": "{:%H:%M · %a %d %b}",
+    "format-alt": "{:%A, %B %d, %Y}",
     "on-click": "gnome-calendar",
     "timezone": "Etc/GMT-6",
-    "tooltip": false
+    "tooltip-format": "{:%A, %B %d, %Y}"
   },
 
   // System
@@ -133,7 +125,7 @@
   // Harddisc space used
   "disk": {
     "interval": 30,
-    "format": " {percentage_used}% "
+    "format": "󰋊 Disk {percentage_used}%"
     //"path": "/",
   },
 
@@ -217,27 +209,27 @@
   // Pulseaudio
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{icon} {volume}%",
+    "format": "{icon} Vol {volume}%",
     "format-bluetooth": "{icon} {volume}%",
     "format-bluetooth-muted": "{icon} {format_source}",
-    "format-muted": "{format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
+    "format-muted": "{icon} Muted",
+    "format-source": "{volume}% 󰍬",
+    "format-source-muted": "󰍭",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": " ",
-      "portable": " ",
-      "car": " ",
-      "default": ["", "", ""]
+      "headphone": "󰋋",
+      "hands-free": "󰋋",
+      "headset": "󰋋",
+      "phone": "󰘛",
+      "portable": "󰘛",
+      "car": "� Infant",
+      "default": ["󰕿", "󰖀", "󰕾"]
     },
     "on-click": "pavucontrol"
   },
 
   // CPU
   "cpu": {
-    "format": " {usage}%"
+    "format": "󰍛 CPU {usage}%"
   },
 
   "custom/netspeed": {
@@ -247,12 +239,13 @@
 
   // MEMORY
   "memory": {
-    "format": "󰘷 {}%"
+    "format": " RAM {}%"
   },
 
   // Bluetooth
   "bluetooth": {
-    "format": " {status}",
+    "format": " On",
+    "format-connected": " Active",
     "format-disabled": "",
     "format-off": "",
     "interval": 30,
