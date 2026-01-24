@@ -1,12 +1,24 @@
 {
-  // Workspaces
-  "custom/workspaces": {
-    "format": "{}",
-    "exec": "~/.config/waybar/workspace.sh",
-    "interval": 1,
-    "on-click": "hyprctl dispatch workspace +1",
-    "on-click-right": "hyprctl dispatch workspace -1",
-    "transition": "fade"
+  // Hyprland Workspaces
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "format-icons": {
+      "active": "󰮯",
+      "default": "󰮮"
+    },
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    }
   },
 
   // Hyprland Window
@@ -66,7 +78,7 @@
   // Power Menu
   "custom/exit": {
     "format": "󰐦",
-    "on-click": "~/.config/rofi/powermenu/type-6/powermenu.sh",
+    "on-click": "~/.config/wofi/powermenu.sh",
     "tooltip-format": "Power Menu"
   },
 
@@ -187,7 +199,8 @@
     "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50
+    "max-length": 50,
+    "on-click": "ghostty -e iwctl"
   },
 
   // Battery

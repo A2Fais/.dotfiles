@@ -159,7 +159,7 @@ window#waybar {
   font-weight: bold;
   font-size: 15px;
   color: white;
-  transition: all 0.1s ease-in-out;
+  transition: none;
   background: rgba(30, 30, 40, 0.7);
   margin: 8px 0 8px 0;
   padding: 4px 10px 4px 10px;
@@ -172,7 +172,7 @@ window#waybar {
 
 #workspaces button:hover {
   background: rgba(55, 55, 55, 0.9);
-  transition: ease-out 0.1s all;
+  transition: none;
 }
 
 /* -----------------------------------------------------
@@ -232,11 +232,11 @@ tooltip label {
   color: #ffffff;
   opacity: 0.9;
   border-radius: 12px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: none;
 }
 
 #custom-workspaces span {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: none;
 }
 
 #custom-workspaces:hover,
